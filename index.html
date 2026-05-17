@@ -16,7 +16,7 @@
 
     /* ── HEADER ── */
     header {
-      background: #e84b1a;
+      background: #FF4600;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -29,13 +29,18 @@
       gap: 14px;
     }
 
+    .header-logo img {
+      height: 50px;
+      object-fit: contain;
+    }
+
     .logo-badge {
       background: #fff;
       border-radius: 8px;
       padding: 4px 10px;
       font-weight: 900;
       font-size: 18px;
-      color: #e84b1a;
+      color: #FF4600;
       letter-spacing: 1px;
     }
 
@@ -64,17 +69,17 @@
 
     /* ── MAIN CONTAINER ── */
     main {
-      max-width: 1100px;
+      max-width: 1300px;
       margin: 32px auto;
       padding: 0 16px 48px;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 380px;
+      grid-template-columns: minmax(0, 1fr) 550px;
       gap: 24px;
       align-items: start;
     }
 
     main h1 {
-      color: #e84b1a;
+      color: #FF4600;
       font-size: 32px;
       font-weight: 800;
       margin-bottom: 24px;
@@ -96,7 +101,7 @@
     .note-box .note-icon {
       font-size: 20px;
       flex-shrink: 0;
-      color: #e84b1a;
+      color: #FF4600;
       margin-top: 2px;
     }
 
@@ -145,14 +150,14 @@
     }
 
     .accordion-header-left .acc-icon {
-      color: #e84b1a;
+      color: #FF4600;
       font-size: 20px;
       width: 24px;
       text-align: center;
     }
 
     .chevron {
-      color: #e84b1a;
+      color: #FF4600;
       font-size: 18px;
       transition: transform .25s;
     }
@@ -202,19 +207,19 @@
     }
 
     .option-btn:hover {
-      border-color: #e84b1a;
+      border-color: #FF4600;
       background: #fbe8e1;
     }
 
     .option-btn.selected {
-      border-color: #e84b1a;
+      border-color: #FF4600;
       background: #fbe8e1;
       font-weight: 600;
       color: #c23900;
     }
 
     .option-btn .placeholder {
-      color: #e84b1a;
+      color: #FF4600;
       font-style: italic;
     }
 
@@ -238,7 +243,7 @@
       color: #222;
     }
 
-    .preview-header .sparkle { color: #e84b1a; font-size: 20px; }
+    .preview-header .sparkle { color: #FF4600; font-size: 20px; }
 
     .preview-hint {
       padding: 12px 20px 4px;
@@ -261,7 +266,7 @@
     }
 
     .preview-code .section-label {
-      color: #e84b1a;
+      color: #FF4600;
       font-weight: 700;
     }
 
@@ -291,7 +296,7 @@
       transition: border-color .15s, background .15s;
     }
 
-    .copy-btn:hover { border-color: #e84b1a; background: #fdf2ee; }
+    .copy-btn:hover { border-color: #FF4600; background: #fdf2ee; }
     .copy-btn.copied { color: #2a9d50; border-color: #2a9d50; background: #eafaf1; }
 
     /* ── FOOTER ── */
@@ -302,7 +307,7 @@
       padding: 24px 0 12px;
     }
 
-    footer span.heart { color: #e84b1a; }
+    footer span.heart { color: #FF4600; }
 
     @media (max-width: 900px) {
       main {
@@ -320,8 +325,7 @@
 
 <header>
   <div class="header-logo">
-    <div class="logo-badge">factoría<br><small style="font-size:10px;font-weight:400;">POWERED BY SIMPLON</small></div>
-    <div class="logo-ai"><span class="ai-icon">🤖</span> AI SCHOOL</div>
+    <img src="img/logos.png" alt="Logos de Factoría y AI School">
   </div>
 </header>
 
@@ -441,6 +445,18 @@
             <button class="option-btn" data-value="Redacta un correo electrónico dirigido a [COMPLETAR] con el objetivo de [COMPLETAR].">
               Redacta un correo electrónico dirigido a <span class="placeholder">[COMPLETAR]</span> con el objetivo de <span class="placeholder">[COMPLETAR]</span>.
             </button>
+            <button class="option-btn" data-value="Explica [COMPLETAR] como si fuera para una persona principiante.">
+              Explica <span class="placeholder">[COMPLETAR]</span> como si fuera para una persona principiante.
+            </button>
+            <button class="option-btn" data-value="Haz una lista de ventajas y desventajas sobre [COMPLETAR].">
+              Haz una lista de ventajas y desventajas sobre <span class="placeholder">[COMPLETAR]</span>.
+            </button>
+            <button class="option-btn" data-value="Genera un paso a paso para realizar [COMPLETAR].">
+              Genera un paso a paso para realizar <span class="placeholder">[COMPLETAR]</span>.
+            </button>
+            <button class="option-btn" data-value="Organiza las siguientes tareas en orden de prioridad: [COMPLETAR].">
+              Organiza las siguientes tareas en orden de prioridad: <span class="placeholder">[COMPLETAR]</span>.
+            </button>
           </div>
         </div>
       </div>
@@ -498,6 +514,12 @@
             </button>
             <button class="option-btn" data-value="El tono debe ser técnico y preciso, orientado a expertos.">
               El tono debe ser técnico y preciso, orientado a expertos.
+            </button>
+            <button class="option-btn" data-value="Quiero que uses un tono creativo y persuasivo.">
+              Quiero que uses un tono creativo y persuasivo.
+            </button>
+            <button class="option-btn" data-value="Usa un lenguaje sencillo y explicativo.">
+              Usa un lenguaje sencillo y explicativo.
             </button>
           </div>
         </div>
@@ -557,6 +579,21 @@
             <button class="option-btn" data-value="No uses un tono demasiado casual o informal.">
               No uses un tono demasiado casual o informal.
             </button>
+            <button class="option-btn" data-value="Incluye solo información verificada.">
+              Incluye solo información verificada.
+            </button>
+            <button class="option-btn" data-value="No incluyas información de webs [COMPLETAR].">
+              No incluyas información de webs <span class="placeholder">[COMPLETAR]</span>.
+            </button>
+            <button class="option-btn" data-value="Evita terminología técnica complicada.">
+              Evita terminología técnica complicada.
+            </button>
+            <button class="option-btn" data-value="No incluyas información no verificada.">
+              No incluyas información no verificada.
+            </button>
+            <button class="option-btn" data-value="No incluyas opiniones personales.">
+              No incluyas opiniones personales.
+            </button>
           </div>
         </div>
       </div>
@@ -586,6 +623,9 @@
             <button class="option-btn" data-value="Incorpora un ejemplo que ilustre el uso en un contexto real.">
               Incorpora un ejemplo que ilustre el uso en un contexto real.
             </button>
+            <button class="option-btn" data-value="Sigue la estructura y tono de este ejemplo: [COMPLETAR].">
+              Sigue la estructura y tono de este ejemplo: <span class="placeholder">[COMPLETAR]</span>.
+            </button>
           </div>
         </div>
       </div>
@@ -614,6 +654,9 @@
             </button>
             <button class="option-btn" data-value="Mantén una estructura clara y sin repeticiones.">
               Mantén una estructura clara y sin repeticiones.
+            </button>
+            <button class="option-btn" data-value="Antes de ejecutar la orden pregúntame lo que necesites para hacer bien tu trabajo.">
+              Antes de ejecutar la orden pregúntame lo que necesites para hacer bien tu trabajo.
             </button>
           </div>
         </div>
