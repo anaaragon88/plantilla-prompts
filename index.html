@@ -67,6 +67,26 @@
       letter-spacing: 0.5px;
     }
 
+    /* ── NAV TABS ── */
+    .nav-tabs {
+      display: flex;
+      gap: 16px;
+      margin: 0 auto;
+    }
+
+    .nav-tabs a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background .2s;
+    }
+
+    .nav-tabs a:hover { background: rgba(255, 255, 255, 0.2); }
+    .nav-tabs a.active { background: rgba(255, 255, 255, 0.3); }
+
     /* ── MAIN CONTAINER ── */
     main {
       max-width: 1300px;
@@ -327,6 +347,10 @@
   <div class="header-logo">
     <img src="img/logos.png" alt="Logos de Factoría y AI School">
   </div>
+  <nav class="nav-tabs">
+    <a href="index.html" class="active">📝 Textos</a>
+    <a href="image-prompts.html">🖼️ Imágenes</a>
+  </nav>
 </header>
 
 <main>
